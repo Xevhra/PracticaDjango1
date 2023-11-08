@@ -1,5 +1,16 @@
 <html>
 <body>
+
+   <h1>AÑADIRPIEROTAREAS</h1>
+   <form action="{% url 'task_list' %}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Nueva pierotarea</button>
+   </form>   
+
+
+
+
    <h1>Lista de Tareas</h1>
    <ul>
     {% for task in tasks %}
