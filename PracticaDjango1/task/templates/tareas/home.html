@@ -1,0 +1,21 @@
+<html>
+<body>
+
+   
+   
+   <h1>AÑADIR PIEROTAREAS</h1>
+   <p><a href="{% url 'new' %}">Nuevo Comentario</a></p>
+      
+
+
+
+   <h1>Lista de Tareas</h1>
+   <ul>
+    {% for task in tasks %}
+    <li>Nombre: {{ task.nombre }} - {{ task.pk }} - <p><a href="{% url 'tarea' pk=task.pk %}">Ver tarea</a></p></li>
+    {% empty %}
+    <li>No hay tareas por hacer</li>    
+    {% endfor %}
+   </ul>
+</body>
+</html>

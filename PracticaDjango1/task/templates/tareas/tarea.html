@@ -1,0 +1,12 @@
+<h1>Descripción de la tarea</h1>
+<ul>
+
+ <li>{{ task.nombre }}</li>
+ <li>{{ task.descripcion }}</li>
+ <li>{{ task.realizacion|yesno:"Si,No"}}</li>
+
+</ul>
+
+<p><a href="{% url 'home' %}">Volver</a></p>
+</body>
+</html>
